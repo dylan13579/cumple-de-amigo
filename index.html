@@ -14,6 +14,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             overflow: hidden;
+            margin: 0; /* Eliminar márgenes por defecto */
         }
         .container {
             border: 2px solid blue;
@@ -21,9 +22,11 @@
             padding: 20px;
             background-color: black;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%; /* Limitar el ancho máximo */
+            width: 400px; /* Ancho fijo para pantallas grandes */
         }
         h1 {
-            font-size: 3em;
+            font-size: 2.5em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
             color: blue;
             transition: transform 0.5s;
         }
@@ -42,7 +45,7 @@
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: blue;
+            background-color: darkblue; /* Cambiar a un tono más oscuro al pasar el cursor */
         }
         .gift {
             display: none;
@@ -60,9 +63,13 @@
             50% { opacity: 1; }
             100% { transform: translateY(0); }
         }
-
-        p{
+        p {
             color: blue;
+        }
+        img {
+            max-width: 100%; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
+            height: auto; /* Mantener la proporción de la imagen */
+            margin-top: 20px; /* Espacio entre la imagen y el texto */
         }
     </style>
 </head>
@@ -70,11 +77,11 @@
 
     <div class="container">
         <h1>¡Feliz Cumpleaños Santy!</h1>
-        <img src="channels4_banner.jpg" alt="">
+        <img src="channels4_banner.jpg" alt="Imagen de cumpleaños">
         <p>¡Eres un gran amigo y compañero! 🎉</p>
         <button onclick="mostrarRegalo()">¡Haz clic para ver un regalo!</button>
         <div id="regalo" class="gift">🎁</div>
-        <div id="mensajeAmistad" class="friendship-message">La amistad es el mejor regalo que puedo tener compañero de toda la vida. 🎮🕹️</div>
+        <div id="mensajeAmistad" class="friendship-message">La amistad es el mejor regalo que puedo tener, compañero de toda la vida. 🎮🕹️</div>
     </div>
 
     <script>
