@@ -14,7 +14,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             overflow: hidden;
-            margin: 0; /* Eliminar márgenes por defecto */
+            margin: 0;
         }
         .container {
             border: 2px solid blue;
@@ -22,13 +22,14 @@
             padding: 20px;
             background-color: black;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 90%; /* Limitar el ancho máximo */
-            width: 400px; /* Ancho fijo para pantallas grandes */
+            max-width: 90%;
+            width: 400px;
         }
         h1 {
-            font-size: 2.5em; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+            font-size: 2.5em;
             color: blue;
             transition: transform 0.5s;
+            margin-bottom: 20px;
         }
         h1:hover {
             transform: scale(1.1);
@@ -45,18 +46,19 @@
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: darkblue; /* Cambiar a un tono más oscuro al pasar el cursor */
+            background-color: darkblue;
         }
         .gift {
             display: none;
             font-size: 3em;
             animation: bounce 0.5s forwards;
+            margin-top: 30px;
         }
         .friendship-message {
             display: none;
             font-size: 1.5em;
             color: blue;
-            margin-top: 20px;
+            margin-top: 30px; 
         }
         @keyframes bounce {
             0% { transform: translateY(-100px); opacity: 0; }
@@ -65,11 +67,12 @@
         }
         p {
             color: blue;
+            margin: 20px 0;
         }
         img {
-            max-width: 100%; /* Asegurarse de que la imagen no exceda el ancho del contenedor */
-            height: auto; /* Mantener la proporción de la imagen */
-            margin-top: 20px; /* Espacio entre la imagen y el texto */
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
         }
     </style>
 </head>
