@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños Santy</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            border: 2px solid blue;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: black;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3em;
+            color: blue;
+            transition: transform 0.5s;
+        }
+        h1:hover {
+            transform: scale(1.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: blue;
+        }
+        .gift {
+            display: none;
+            font-size: 3em;
+            animation: bounce 0.5s forwards;
+        }
+        .friendship-message {
+            display: none;
+            font-size: 1.5em;
+            color: blue;
+            margin-top: 20px;
+        }
+        @keyframes bounce {
+            0% { transform: translateY(-100px); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        p{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>¡Feliz Cumpleaños Santy!</h1>
+        <img src="channels4_banner.jpg" alt="">
+        <p>¡Eres un gran amigo y compañero! 🎉</p>
+        <button onclick="mostrarRegalo()">¡Haz clic para ver un regalo!</button>
+        <div id="regalo" class="gift">🎁</div>
+        <div id="mensajeAmistad" class="friendship-message">La amistad es el mejor regalo que puedo tener compañero de toda la vida. 🎮🕹️</div>
+    </div>
+
+    <script>
+        function mostrarRegalo() {
+            const regalo = document.getElementById('regalo');
+            const mensajeAmistad = document.getElementById('mensajeAmistad');
+            regalo.style.display = 'block';
+            regalo.classList.add('bounce');
+            mensajeAmistad.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
